@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&family=Recursive&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: -webkit-linear-gradient(rgba(122,32,212,0.5),rgba(12,123,34,0.6));
+    display:flex;
+     align-items: center;
+     flex-direction: column;
+     padding: 0 12px;
+     justify-content: center;    
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav > img{
+    width: 80px;
+    border-radius: 20%;
+    cursor: pointer;
+}
+nav ul li{
+    display: inline-block;
+    margin-left: 4px;
+    list-style: none;
+    font-size: 21px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 4px 6px;
+    color: #ffffff;
+    transition: all ease-in 0.12s;
+}
+nav ul li a:hover{
+  /* text-decoration: underline; */
+  border-radius: 6px;
+  border: 2px dotted grey;
+  filter: blur(0.9px);
+}
+
+.bg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+
+.home-content{
+position: absolute;
+top:30%;
+color: #ffffff;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+}
+.home-content .left{
+width: 48%;
+}
+.home-content .left .txt-1{
+    letter-spacing: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 27px;
+    text-shadow: 2px 3px 3px red;
+    font-weight: 400;
+}
+.home-content .left .txt-2{
+    margin-left: 12px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+    text-shadow: 2px 1px 1px rgb(153, 214, 236);
+    font-weight: 600;
+    margin-top: 6px;
+}
+.home-content .left p{
+   line-height: 3;
+   font-size: 16px;
+   font-family: 'Montserrat', sans-serif;
+   margin-bottom: 25px;
+}
+.home-content .left .btn{
+    text-decoration: none;
+    margin: 45px 10px;
+    background: rgb(153, 214, 236);
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: 'Recursive', sans-serif;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+.home-content .left .btn:hover{
+    background: none;
+    color:#ffffff;
+    border: 2px solid rgb(153, 214, 236);
+}
+.home-content .right{
+    width: 40%;
+    margin-left: 3%;
+}
+.home-content .right img{
+width: 450px;
+height: 300px;
+border-radius: 12px;
+border: 2px solid grey;
+box-shadow: -2px -3px 3px rgb(153, 214, 236), 2px 3px 3px green;
+}
+.footer{
+    position: absolute;
+    width: 60vw;
+    bottom: 5%;
+    /* left: 3%; */
+    display: flex;
+    color: #ffffff;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer .left{
+    font-size: 21px;
+}
+.footer .left a{
+    text-decoration: none;
+    margin-left: 12px;
+    font-size: 27px;
+}
+.footer .right{
+    font-size: 20px;
+    margin-left: 4%;
+}
+
+
+
+/* responsive design */
+
+@media (max-width: 500px){
+    .home-content .right img{
+        width: 300px;
+    }
+    nav{
+        padding: 20px 2%;
+    }
+    nav > img{
+        width: 40px;
+        cursor: pointer;
+    }
+    nav ul li{
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .home-content{
+        top:20%;
+        }
+        .home-content .column{
+        width: 100%;
+        padding: 20px 30px;
+        }
+       
+        .home-content .left p{
+           margin-bottom: 16px;
+        }
+        .home-content .right{
+            margin-left: 3%;
+        }
+    
+        .footer{
+       margin-top: 10px;
+        }
+        .footer .left{
+            font-size: 21px;
+            margin-top: 10px;
+        }
+    
+        .footer .right{
+    
+            font-size: 20px;
+            margin-left: 4%;
+        }
+        
+
+}

@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Ubuntu:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1344px;
+    padding: 0 70px;
+    margin: auto;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 18px 0px;
+    font-family: 'Ubuntu', sans-serif; 
+    transition: all ease-in 0.6s;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo img{
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgb(75, 178, 237);
+    border-radius: 100%;
+    cursor: pointer;
+    animation: spinnimg 10s infinite;
+    transition: all 0.6s ease-in-out;
+}
+.navbar .logo img:hover{
+    border: 5px solid #ffffff;
+}
+@keyframes spinnimg{
+    0%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.navbar .menu li a{
+color: #ffffff;
+font-size: 23px;
+padding: 3px 6px;
+font-weight: 500;
+transition: all ease 0.5s;
+}
+.navbar .menu li a:hover{
+    text-decoration: underline;
+    color: grey;
+}
+.navbar .menu li:visited{
+    color: lightsalmon;
+}
+
+/* home section styling */
+.home{
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    color: #ffff;
+    background: -webkit-linear-gradient(36deg, blue 45%, white 5%,lightgreen);
+    font-family: 'Ubuntu', sans-serif;
+    animation: myanimation 10ms infinite ease-in-out;
+}
+@keyframes myanimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.home .max-width {
+    margin: auto  0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 65px;
+    font-weight: 500;
+    margin: 6px;
+    margin-left: -4px;
+}
+.home .home-content .text-3{
+    font-size: 35px;
+}
+.home .home-content .text-3 span{
+    color: rgb(20, 250, 223);
+    font-weight: 600;
+}
+.home  .home-content a{
+    display: inline-block;
+    background: rgb(75, 178, 237);
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.home  .home-content a i{
+    margin-right: 3px;
+}
+.home .home-content a:hover{
+    background: none;
+    border: 2px solid orange;
+    color: darkcyan;
+}
+
+/* common styling */
+section{
+    padding: 100px 0;
+}
+.about,.skills,.projects,.contact{
+    font-family: 'Poppins', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 180px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: translateX(-50%);
+}
+.about .title{
+    position: relative;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+
+}
+
+/* about  */
+.about .title::after{
+    content: "my intro";
+}
+.about .about-content,
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 40%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+.about .about-content .right .text span{
+    color: rgb(75, 178, 237);
+    font-weight: 600;
+    transition: all 0.6s ease-in;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a i{
+    margin-right: 6px;
+    font-size: 27px;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: rgb(75, 178, 237);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 28px;
+    padding: 6px 18px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.about .about-content .right a:hover{
+    background: none;
+    border: 2px solid orange;
+    color: grey;
+}
+
+/* skills section styling  */
+.skills{
+background: -webkit-linear-gradient(30deg,rgb(182, 235, 230) 51.4%,white 5%,lightgreen 45%);
+color: #ffffff;
+}
+.skills .title{
+    position: relative;
+    margin-bottom: 80px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+.skills .title::before{
+    /* background: #ffffff; */
+    width: 156px;
+}
+.skills .title::after{
+    content: "my skills";
+    color: rgb(0, 200, 255);
+    font-size: 14px;
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+
+}
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left  p{
+    text-align: justify;
+    font-size: 16px;
+}
+.skills .skills-content .left a i{
+    color: grey;
+    font-size: 28px;
+    margin-right: 6px;
+}
+.skills .skills-content .left a{
+    display: inline-block;
+    background: rgb(75, 178, 237);
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.skills .skills-content .left a:hover{
+    background: none;
+    border: 2px solid orange;
+    color: grey;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 20px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(1, 35, 202);
+}
+.skills .skills-content .right .html::before{
+    width: 90%;
+}
+.skills .skills-content .right .css::before{
+    width: 80%;
+}
+.skills .skills-content .right .js::before{
+    width: 60%;
+}
+.skills .skills-content .right .bts::before{
+    width: 85%;
+}
+
+.skills .skills-content .right .sql::before{
+    width: 55%;
+}
+
+.skills .skills-content .right .node::before{
+    width: 50%;
+}
+.skills .skills-content .right .exp::before{
+    width: 50%;
+}
+.skills .skills-content .right .mdb::before{
+    width: 60%;
+    background: green;
+}
+/* projects section start  */
+.projects{
+    color: #ffffff;
+    background: -webkit-linear-gradient(95deg,lightgrey 55%, rgb(244, 237, 237) 45%);
+}
+.projects .title{
+    position: relative;
+    margin-bottom: 80px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+.projects .title::before{
+    background: #ffffff;
+    width: 200px;
+}
+.projects .title::after{
+    content: "my strength";
+    /* color: #0000; */
+    background: grey;
+    color: #Ffffff;   
+    font-size: 14px;
+}
+.projects .card-cover .card{
+    background: #8f7d7ddd;
+    border-radius: 6px;
+    padding: 20px 25px;
+    width: 44%;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 30px;
+    transition: all ease-in 0.6s;
+}
+.projects .card-cover .card img{
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid orange;
+    transition: border ease-in-out 0.6s;
+}
+.projects .card-cover .card  .box{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.6s;
+}
+.projects .card-cover .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.projects .card-cover .card:hover{
+    background: rgb(75, 178, 237);
+}
+.projects .card-cover .card:hover img{
+    border: 5px solid #ffff;
+}
+.projects .card-cover .card:hover .box{
+    transform: scale(0.94);
+}
+/* contact section  */
+.contact .title{
+    position: relative;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+.contact .title::after{
+    content: "know me";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content p{
+    font-size: 14px;
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content  .row i{
+    font-size: 26px;
+    color: orange;
+}
+.contact .contact-content .row .info .head{
+    font-weight: 600;
+}
+.contact .contact-content .row .info .sub-title{
+    color: #111111;
+}
+.contact .contact-content .right{
+    padding: 10px 12px;
+}
+.contact .contact-content .right form input{
+    font-size: 23px;
+    outline: none;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin: 4px 1px;
+}
+.contact .contact-content .right form textarea{
+  font-size: 16px;
+  border: 2px solid grey;
+
+}
+.contact .contact-content .right form button{
+    display: inline-block;
+    background: rgb(75, 178, 237);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 28px;
+    padding: 6px 18px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.contact .contact-content .right form button:hover{
+    background: none;
+    border: 2px solid orange;
+    color: grey;
+}
+
+.footer{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+/* responsive media query */
+@media (max-width: 1105px){
+    .max-width{
+        left: 0px;
+    }
+    .about .about-content .left{
+        width: 40%;
+    }
+    .about .about-content .left img{
+        height: 330px;
+        width: 330px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .about .about-content .right .text{
+        font-size: 23px;
+        font-weight: 500;
+        margin-bottom: 6px;
+    }
+    .about .about-content .right .text span{
+        color: orange;
+        font-weight: 600;
+    }
+    .about .about-content .right p{
+        font-size: 14px;
+        text-align: justify;
+    }
+    .about .about-content .right{
+        width: 55%;
+    }
+    .about .about-content .right a{
+        margin-top: 10px;
+        text-align: 18px;
+    }
+    
+}
+@media (max-width: 915px){
+.max-width{
+    padding: 0px 50px;
+}
+.about .about-content .column{
+    width: 100%;
+    margin-top: 20px;
+}
+.about .about-content .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .menu{
+    position: relative;
+    /* height: 0vh; */
+    width: 100vw;
+    /* left: 100%; */
+    /* top: 0; */
+    text-align: center;
+    /* background: #111111; */
+    padding: 12px 20px;
+    transition: all ease-in 0.98s;
+}
+
+.navbar .menu li{
+    display: inline-block;
+    margin: 6px 0px;
+}
+.navbar .menu li a{
+    display: inline-block;
+    font-size: 18px;
+}
+.skills .skills-content .column,
+.contact .contact-content .column{
+    width: calc(100% - 30px);
+
+}
+.projects .card-cover .card{
+    background: #8f7d7ddd;
+    border-radius: 6px;
+    padding: 12px 15px;
+    width: 90%;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    margin: 8px 8px;
+    transition: all ease-in 0.6s;
+}
+.projects .card-cover .card img{
+    height: 80px;
+    width: 80px;
+}
+.projects .card-cover .card .text{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 8px 0 5px 0;
+}
+}
+@media (max-width: 625px){
+.max-width{
+    padding: 0px 20px;
+    left: 0;
+}
+.navbar .logo img{
+    width: 40px;
+    height: 40px;
+}
+.home .home-content a{
+    font-size: 23px;
+}
+.home .home-content .text-1{
+    font-size: 25px;
+}
+.home .home-content .text-2{
+    font-size: 45px;
+    font-weight: 500;
+    margin: 3px;
+    margin-left: -4px;
+}
+.home .home-content .text-3{
+    font-size: 29px;
+}
+}
+@media(max-width: 450px){
+    .max-width{
+        padding: 0px 20px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .home .home-content .text-1{
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    .home .home-content .text-2{
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 1.3;
+        margin-left: -6px;
+    }
+    .home .home-content .text-3{
+        font-size: 24px;
+    }
+}
